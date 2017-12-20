@@ -1,0 +1,132 @@
+@mixin box-flex($n:1) {
+  -webkit-box-flex: $n;
+  -moz-box-flex: $n;
+  -ms-box-flex: $n;
+  -o-box-flex: $n;
+  box-flex: $n;
+}
+
+@mixin box-pack($value:center) {
+  -webkit-box-pack: $value;
+  -moz-box-pack: $value;
+  -ms-box-pack: $value;
+  -o-box-pack: $value;
+  box-pack: $value;
+}
+
+@mixin box-align($value:center) {
+  -webkit-box-align: $value;
+  -moz-box-align: $value;
+  -ms-box-align: $value;
+  -o-box-align: $value;
+  box-align: $value;
+}
+
+@mixin display-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+}
+
+//
+//@mixin data-border{
+//  &[data-border]{
+//    border-bottom: 1px solid $color;
+//  }
+//}
+
+$height: 4.4em;
+$color: #e4e4e4;
+
+.react-items {
+  font-size: 10px;
+  background: #FFF;
+  color: #333;
+
+  //dataBorders:
+  &[data-borders=both] {
+    border-top: 1px solid $color;
+    border-bottom: 1px solid $color;
+  }
+  &[data-borders=top] {
+    border-top: 1px solid $color;
+  }
+  &[data-borders=bottom] {
+    border-bottom: 1px solid $color;
+  }
+
+  &[data-left-border=true] {
+    .react-cell-left {
+      border-bottom: 1px solid $color;
+    }
+  }
+
+  //LeftBorder:
+  &[data-left-border=false] {
+    .react-cell-left {
+      border-bottom: none;
+    }
+  }
+
+  // InnerPadding:
+  &[data-inner-padding=true]{
+    >.react-cell{
+      padding-left: 1em;
+    }
+  }
+
+  &[data-inner-padding=false]{
+    >.react-cell{
+      padding-left: 0;
+    }
+  }
+
+  > .react-cell {
+    @include display-box;
+    // @include box-align(center);
+
+    & > * {
+      @include display-box;
+      @include box-align();
+      @include box-pack;
+    }
+
+    &[data-auto-height=false]{
+      height: $height;
+    }
+
+    &:last-child {
+      > * {
+        border-bottom: none !important;
+      }
+    }
+
+    &[data-clickable=true] {
+      &:active{
+        background: #eee;
+      }
+    }
+
+    > .react-cell-left {
+      padding-right: 1em;
+
+      > img {
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    > .react-cell-body {
+      @include box-flex;
+      @include box-pack(start);
+      border-bottom: 1px solid $color;
+    }
+
+    >.react-cell-right {
+      // width: 30px;
+      border-bottom: 1px solid $color;
+    }
+  }
+}
