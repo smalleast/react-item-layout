@@ -38,39 +38,6 @@ npm run build  正式
 安装组件的命令
 npm install smalleast/react-items --save
 
-页面具体操作
-import {reactComponentsTemplate, reactComponentsTemplateCtrl} from './main';
-
-组件初始化
-componentDidMount() {
-    reactComponentsTemplateCtrl.createInstance({
-      backdropOptions: {
-        zIndex: 11,
-        opacity: 0.1
-      }
-    });
-  }
-
-方法具体实现
-_click1() {
-    reactComponentsTemplateCtrl.show({
-      header: '头部文案',
-      body: '弹出框内容',
-      theme: 'transparent',
-      buttons: [{
-        text: 'OK',
-        onClick: function (item) {
-          reactComponentsTemplateCtrl.hide();
-        }
-      }]
-    });
-  }
-
-
-html引用方法
- <button onClick={this._click1.bind(this)}>TEST MODAL</button>
-```
-
 
 
 
