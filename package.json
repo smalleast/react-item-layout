@@ -1,24 +1,24 @@
 {
   "name": "react-items",
-  "version": "0.1.0",
-  "description": "React cell component.",
-  "author": "afeiship <1290657123@qq.com>",
+  "version": "1.0.0",
+  "description": "React item component.",
+  "author": "smalleast <382026180@qq.com>",
   "keywords": [
     "components",
-    "react-cell",
+    "react-item",
     "ui",
     "theme"
   ],
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afeiship/react-items.git"
+    "url": "git+https://github.com/smalleast/react-items.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/afeiship/react-items/issues"
+    "url": "https://github.com/smalleast/react-items/issues"
   },
-  "homepage": "https://github.com/afeiship/react-items",
+  "homepage": "https://github.com/smalleast/react-items",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"

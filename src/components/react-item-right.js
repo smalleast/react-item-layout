@@ -17,7 +17,7 @@ export default class extends PureComponent {
   render() {
     const {className, children, ...props} = this.props;
     return (
-      <div {...props} className={classNames('react-cell-right', className)}>{children ||
+      <div {...props} className={classNames('react-item-right', className)}>{children ||
       <img width="12" src={arrowImg}/>}</div>
     );
   }

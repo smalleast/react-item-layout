@@ -24,7 +24,7 @@ export default class extends PureComponent {
     const {className, children, clickable,autoHeight,...props} = this.props;
     return (
       <div {...props} data-clickable={clickable} data-auto-height={autoHeight}
-           className={classNames('react-cell', className)}>{children}</div>
+           className={classNames('react-item', className)}>{children}</div>
     );
   }
 }

@@ -58,32 +58,32 @@ $color: #e4e4e4;
   }
 
   &[data-left-border=true] {
-    .react-cell-left {
+    .react-item-left {
       border-bottom: 1px solid $color;
     }
   }
 
   //LeftBorder:
   &[data-left-border=false] {
-    .react-cell-left {
+    .react-item-left {
       border-bottom: none;
     }
   }
 
   // InnerPadding:
   &[data-inner-padding=true]{
-    >.react-cell{
+    >.react-item{
       padding-left: 1em;
     }
   }
 
   &[data-inner-padding=false]{
-    >.react-cell{
+    >.react-item{
       padding-left: 0;
     }
   }
 
-  > .react-cell {
+  > .react-item {
     @include display-box;
     // @include box-align(center);
 
@@ -109,7 +109,7 @@ $color: #e4e4e4;
       }
     }
 
-    > .react-cell-left {
+    > .react-item-left {
       padding-right: 1em;
 
       > img {
@@ -118,13 +118,13 @@ $color: #e4e4e4;
       }
     }
 
-    > .react-cell-body {
+    > .react-item-body {
       @include box-flex;
       @include box-pack(start);
       border-bottom: 1px solid $color;
     }
 
-    >.react-cell-right {
+    >.react-item-right {
       // width: 30px;
       border-bottom: 1px solid $color;
     }

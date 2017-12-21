@@ -19,7 +19,7 @@ export default class extends PureComponent {
   render() {
     const {className, children,...props} = this.props;
     return (
-      <div {...props} className={classNames('react-cell-body', className)}>{children}</div>
+      <div {...props} className={classNames('react-item-body', className)}>{children}</div>
     );
   }
 }

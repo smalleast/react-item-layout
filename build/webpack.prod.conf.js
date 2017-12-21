@@ -10,7 +10,7 @@ base.output = {
   path: config.build.assetsRoot,
   publicPath: config.build.assetsPublicPath,
   filename: 'react-items.js',
-  library: 'ReactCells',
+  library: 'ReactItems',
   libraryTarget: 'umd'
 }
 
